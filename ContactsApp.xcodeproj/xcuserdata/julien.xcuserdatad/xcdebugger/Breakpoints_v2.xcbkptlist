@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1AE6B8A0-9397-4E9E-BBD0-3FA5931D37D0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactsApp/TableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "TableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - a3adcb92f9570a78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.indexpath.getter : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - 6280066fdde57a6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.indexpath.setter : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - d2f3e31a7c39fc88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.indexpath.modify : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - 75ba1f78ca971e09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.indexpath.modify : Swift.Optional&lt;Foundation.IndexPath&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - 2e01eed18748a12f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; ContactsApp.TableViewCell"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "379">
+               </Location>
+               <Location
+                  uuid = "7B9E8ADA-DFBA-443C-9E57-A15E22F23F57 - b9360d3ee20006cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactsApp.TableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ContactsApp.TableViewCell&gt;"
+                  moduleName = "ContactsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julien/Desktop/Development/ContactsApp/ContactsApp/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "329">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA9916D4-7E35-4C6B-AB7E-E67FF8A8EFC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactsApp/ContactsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "contactingForDeleting(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
