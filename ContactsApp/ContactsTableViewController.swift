@@ -9,21 +9,14 @@ import UIKit
 class ContactsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     
-    var contactList=[["Julien Joseph Thomas", "+91-9495718991", "abc@gmail.com"],["Bill Gates",      "+1-202-5358-9793", "abc@gmail.com"],
-                     ["Tim Cook",        "+1-203-2384-6264", "abc@gmail.com"],
-                     ["Richard Branson", "+1-204-3383-2795", "abc@gmail.com"],
-                     ["Jeff Bezos",      "+1-205-0288-4197", "abc@gmail.com"],]
     
-    
-    func addtoList(data name: Array<String>) {
-        self.contactList.append(name)
-        print(self.contactList)
-        
-    }
     
     
     
     @IBOutlet weak var contactTable: UITableView!
+    var model=Model()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,13 +29,13 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactList.count
+        return model.getListCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier:"contact") as! TableViewCell
-        cell.name.text=contactList[indexPath.row][0]
-        cell.phoneno.text=contactList[indexPath.row][1]
+        cell.name.text=model.contactList[indexPath.row][0]
+        cell.phoneno.text=model.contactList[indexPath.row][1]
         cell.indexpath=indexPath
         
         cell.delegate=self
@@ -114,7 +107,7 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate, UITabl
                 
             }
             if(isValidName(Input: nameField.text!) && isValidEmail(emailField.text!) && isPhoneNoValid(value: numberField.text!)){
-                self.contactList.append([nameField.text!,numberField.text!,emailField.text!])
+                self.model.contactList.append([nameField.text!,numberField.text!,emailField.text!])
                 self.contactTable.reloadData()
             }
             
@@ -149,7 +142,7 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate, UITabl
 
 extension ContactsTableViewController: ContactDelegate{
     func contactingForDeleting(at index: IndexPath) {
-        self.contactList.remove(at: index.row)
+        self.model.contactList.remove(at: index.row)
         self.contactTable.reloadData()
         
     }
@@ -164,9 +157,9 @@ extension ContactsTableViewController: ContactDelegate{
         
         let action=UIAlertAction(title: "Update", style: .default) { action in
             print(Index)
-            self.contactList[Index.row][0]=nameField.text ?? " "
-            self.contactList[Index.row][1]=numberField.text ?? " "
-            self.contactList[Index.row][2]=emailField.text ?? " "
+            self.model.contactList[Index.row][0]=nameField.text ?? " "
+            self.model.contactList[Index.row][1]=numberField.text ?? " "
+            self.model.contactList[Index.row][2]=emailField.text ?? " "
             
             self.contactTable.reloadData()
             
@@ -175,15 +168,15 @@ extension ContactsTableViewController: ContactDelegate{
             self.dismiss(animated: true, completion: nil)
         }
         alert.addTextField { alertTextField in
-            alertTextField.placeholder=self.contactList[Index.row][0]
+            alertTextField.placeholder=self.model.contactList[Index.row][0]
             nameField=alertTextField
         }
         alert.addTextField { alertTextField in
-            alertTextField.placeholder=self.contactList[Index.row][1]
+            alertTextField.placeholder=self.model.contactList[Index.row][1]
             numberField=alertTextField
         }
         alert.addTextField { alertTextField in
-            alertTextField.placeholder=self.contactList[Index.row][2]
+            alertTextField.placeholder=self.model.contactList[Index.row][2]
             emailField=alertTextField
         }
         

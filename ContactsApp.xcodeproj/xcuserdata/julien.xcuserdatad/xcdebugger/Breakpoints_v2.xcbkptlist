@@ -122,8 +122,8 @@
             filePath = "ContactsApp/ContactsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "contactingForDeleting(at:)"
             landmarkType = "7">
          </BreakpointContent>

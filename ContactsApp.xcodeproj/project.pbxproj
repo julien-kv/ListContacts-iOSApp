@@ -16,6 +16,7 @@
 		F97F09E026D4D199007F7B66 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F09DF26D4D199007F7B66 /* ContactsTableViewController.swift */; };
 		F99D9D0F26D87F3300AB6C5D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D9D0E26D87F3300AB6C5D /* AlertViewController.swift */; };
 		F9BA0E2826D5EE8600FBBCD8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA0E2726D5EE8600FBBCD8 /* TableViewCell.swift */; };
+		F9EC6E8526DCE68200CEAA64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EC6E8426DCE68200CEAA64 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F97F09DF26D4D199007F7B66 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		F99D9D0E26D87F3300AB6C5D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		F9BA0E2726D5EE8600FBBCD8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F9EC6E8426DCE68200CEAA64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				F97F09DF26D4D199007F7B66 /* ContactsTableViewController.swift */,
 				F9BA0E2726D5EE8600FBBCD8 /* TableViewCell.swift */,
 				F99D9D0E26D87F3300AB6C5D /* AlertViewController.swift */,
+				F9EC6E8426DCE68200CEAA64 /* Model.swift */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9EC6E8526DCE68200CEAA64 /* Model.swift in Sources */,
 				F9BA0E2826D5EE8600FBBCD8 /* TableViewCell.swift in Sources */,
 				F99D9D0F26D87F3300AB6C5D /* AlertViewController.swift in Sources */,
 				F97F09CC26D4B459007F7B66 /* LoginPageController.swift in Sources */,
