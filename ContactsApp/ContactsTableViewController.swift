@@ -7,12 +7,6 @@
 
 import UIKit
 class ContactsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-    
-    
-    
-    
-    
-    
     @IBOutlet weak var contactTable: UITableView!
     var model=Model()
     
@@ -22,11 +16,7 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
         contactTable.delegate=self
         contactTable.dataSource=self
-        
-        
-        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.getListCount()
@@ -37,67 +27,39 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate, UITabl
         cell.name.text=model.contactList[indexPath.row][0]
         cell.phoneno.text=model.contactList[indexPath.row][1]
         cell.indexpath=indexPath
-        
         cell.delegate=self
-        
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
 
-    
     @IBAction func addButtonPressed(_ sender: UIButton) {
         var nameField = UITextField()
         var numberField = UITextField()
         var emailField = UITextField()
+        let selff=self.validity
         
         let alert=UIAlertController( title: "Add new Contact", message: " ", preferredStyle: .alert)
         let action=UIAlertAction(title: "Add", style: .default) { (action) in
             
-            if(!self.validity.isValidName(Input: nameField.text!)){
-                let nameErrorAlert=UIAlertController(title: "Username is not Valid", message: "", preferredStyle: .alert)
-                let back=UIAlertAction(title: "Back", style: .default) { action in
-                    self.dismiss(animated: true) {
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-                nameErrorAlert.addAction(back)
-                self.present(nameErrorAlert, animated: true, completion: nil)
-            }
+            self.validity.isValidNameAlertAction(input: nameField.text!, controller: self, alert: alert)
             
-            if(!self.validity.isPhoneNoValid(value:numberField.text!)){
-                let phoneNumberErrorAlert=UIAlertController(title: "Phone Number is not valid ", message: "", preferredStyle: .alert)
-                let back=UIAlertAction(title: "Back", style: .default) { action in
-                    self.dismiss(animated: true) {
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-                phoneNumberErrorAlert.addAction(back)
-                self.present(phoneNumberErrorAlert, animated: true, completion: nil)
-            }
-            if(!self.validity.isValidEmail(emailField.text!)){
-                let emailErrorAlert=UIAlertController(title: "Not a valid Email", message: "", preferredStyle: .alert)
-                let back=UIAlertAction(title: "Back", style: .default) { action in
-                    self.dismiss(animated: true) {
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-                emailErrorAlert.addAction(back)
-                self.present(emailErrorAlert, animated: true, completion: nil)
-                
-            }
-            else{
+            self.validity.isValidPhoneAlertAction(input: numberField.text!, controller: self, alert: alert)
+            
+            self.validity.isValidEmailAlertAction(input: emailField.text!, controller: self, alert: alert)
+            
+            if(selff.isValidName(Input: nameField.text!)&&selff.isPhoneNoValid(value: numberField.text!)&&selff.isValidEmail(emailField.text!)){
                 self.model.contactList.append([nameField.text!,numberField.text!,emailField.text!])
                 self.contactTable.reloadData()
             }
-            
-            
-           
+         
         }
         let cancel=UIAlertAction(title: "Cancel", style: .default) { action in
             self.dismiss(animated: true, completion: nil)
         }
+        
         alert.addTextField { alertTextField in
             alertTextField.placeholder="Contact Name"
             nameField=alertTextField
@@ -135,14 +97,21 @@ extension ContactsTableViewController: ContactDelegate{
         var numberField = UITextField()
         var emailField = UITextField()
         let alert=UIAlertController(title: "Edit Element", message: "", preferredStyle: .alert)
+        let selff=self.validity
         
         let action=UIAlertAction(title: "Update", style: .default) { action in
-            print(Index)
-            self.model.contactList[Index.row][0]=nameField.text ?? " "
-            self.model.contactList[Index.row][1]=numberField.text ?? " "
-            self.model.contactList[Index.row][2]=emailField.text ?? " "
             
-            self.contactTable.reloadData()
+            self.validity.isValidNameAlertAction(input: nameField.text!, controller: self, alert: alert)
+            self.validity.isValidPhoneAlertAction(input: numberField.text!, controller: self, alert: alert)
+            self.validity.isValidEmailAlertAction(input: emailField.text!, controller: self, alert: alert)
+            if(selff.isValidName(Input: nameField.text!)&&selff.isPhoneNoValid(value: numberField.text!)&&selff.isValidEmail(emailField.text!)){
+                self.model.contactList[Index.row][0]=nameField.text ?? " "
+                self.model.contactList[Index.row][1]=numberField.text ?? " "
+                self.model.contactList[Index.row][2]=emailField.text ?? " "
+                self.contactTable.reloadData()
+            }
+            
+            
             
         }
         let cancel=UIAlertAction(title: "Cancel", style: .default) { action in
